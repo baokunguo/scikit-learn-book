@@ -1,0 +1,122 @@
+2015年 05月 10日 星期日 21:45:14 CST
+help
+history
+%history
+%pylab inline
+help(%pylab)
+    help(pylab)
+    help(inline)
+    %pylab inline
+    import ipython
+    import sklearn as sk
+    import numpy as np
+    import matplotlib
+    import matplotlib.pyplot as plt
+    plt.__doc__()
+    plt.__doc__
+    print plt.__doc__
+    x = np.arange(0,5,0.01)
+    y = np.sin(x)
+    plt.plot(x,y)
+    from sklearn import datasets
+    iris = datasets.load_iris()
+    xiris,yiris = iris.data,iris.target
+    xiris
+    xiris.shape
+    type(iris)
+    iris[1,:]
+    type(xiris)
+    xiris[1,:]
+    from sklearn.cross_validation import train_test_split
+    from slearn.preprocessing import StandardScaler
+    from slearn.preprocessing import StandardError
+    from sklearn.preprocessing import StandardError
+    from sklearn.preprocessing import StandardScaler
+    help(train_test_split)
+    X,y = xiris[:,:2],yiris
+    xtrain,xtest,ytrain,ytest = train_test_split(X,y,test_size=0.25,random_state=44)
+    X,y
+    y.shape
+    X.shape
+    xtrain
+    xtrain.shape
+    ytrain.shape
+    ytrain
+    help(StandardScaler)
+    help(StandardScaler)
+    scaler = StandardScaler.fit(xtrain)
+    scaler = StandardScaler().fit(xtrain)
+    scaler
+    scaler.get_params
+    scaler.get_params()
+    scaler.mean_
+    scaler.fit
+    scaler.fit()
+    scaler.std_
+    xtrain
+    std?
+    std(xtrain[:,1])
+    scaler.std_
+    std(xtrain[:,0])
+    var(xtrain[:,0])
+    xtrain = scaler.transform(xtrain)
+    xtrain.shape()
+    xtrain.shape
+    std(xtrain[:,0])
+    std(xtrain[:,1])
+    mean(xtrain[:,1])
+    mean(xtrain[:,0])
+    xtest = scaler.transform(xtest)
+    mane(xtest[:,0])
+    mean(xtest[:,0])
+    mean(xtest[:,1])
+    colors = ['red','greenyellow','blue']
+    for i in xrange(len(colors)):
+        px = xtrain[:,0][ytrain == 1]
+            py = xtrain[:,1][ytrain == i]
+                px = xtrain[:,0][ytrain == i]
+                    plt.scatter(px,py,c=colors[i])
+    plt.legend(iris.target_names)
+    for i in xrange(len(colors)):
+        px = xtrain[:,0][ytrain == 1]
+            py = xtrain[:,1][ytrain == i]
+                px = xtrain[:,0][ytrain == i]
+                    plt.scatter(px,py,c=colors[i])
+    plt.legend(iris.target_names)
+    plt.xlabel('length sepal')
+    plt.ylabel(width sepal)
+    plt.ylabel("width sepal")
+    from sklearn.linear_model import SGDClassifier
+    clf = SGDClassifier()
+    clf.fit(xtrain,ytrain)
+    clf.coef_
+    clf.intercept_
+    SGDClassifier?
+    SGDClassifier?
+    help(SGDClassifier)
+    clf.coef_
+    clf.intercept_
+    clf.intercept_.shape
+    clf.coef_.shape
+    help(SGDClassifier)
+    xmin,xmax = xtrain[:,0].min()-0.5,xtrain[:,0].max() + 0.5
+    ymin,ymax = xtrain[:,1].min() - 0.5,xtrain[:,1].max() + 0.5
+    xs = np.arange(xmin,xmax,0.5)
+    xs
+    xs.shape
+    fig,axes = plt.subplot(1,3)
+    )
+    fig,axes = plt.subplots(1,3)
+    fig.set_size_inches(10,8)
+    axes
+    axes?
+    for i in [0,1,2]:
+        axes[i].set_title('class' + str(i) + ' versus the test ')
+            axes[i].set_xlim(xmin,xmax)
+        axes[i].set_ylim(ymin,ymax)
+        sca(axes[i])
+        for j in xrange(len(colors)):
+                px = xtrain[:,0][ytrain == j]
+                        py = xtrain[:,1][ytrain == j]
+                                plt.scatter(px,py,c=colors[j])
+    %history
